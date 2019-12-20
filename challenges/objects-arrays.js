@@ -15,20 +15,62 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+
+const dinosaur1 = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  lenght: '12m',
+  period: "Late Cretaceous",
+
+}
+console.log(dinosaur1.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+const dinosaur2 = {
+  name: "velociraptor",
+  diet: "carnovorous",
+  weight: "15kg",
+  lenght: '1.8m',
+  period: "Late Jurassic",
+}
+console.log(dinosaur2.weight);
 
 // How long was a stegosaurus?
-console.log();
+const dinosaur3 = {
+  name: "stegoasurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  lenght: '9m',
+  period: "Late jurassic",
+}
+console.log(dinosaur3.lenght);
 
 // What time period did tyrannosaurus live in?
-console.log();
+const dinosaur4 = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  lenght: '12m',
+  period: "Late Cretaceous",
+
+}
+console.log(dinosaur4.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+const dinosaur5 = {
+  name: "tyrannosaurus",
+  diet: "carnivorous",
+  weight: "7000kg",
+  lenght: '12m',
+  period: "Late Cretaceous",
+  speak() {
+    return "RAWERSRARARWERSARARARRRR!"
+  }
+
+}
+console.log(dinosaur5.speak);
 
 
 // ==== Arrays ====
@@ -52,7 +94,15 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities);
+graduates.sort(function (a, b) {
+  if (b.graduates > a.graduates ? 1 : -1) {
+    return 1
+  } else {
+    return -1
+  }
+})
+console.log(graduates);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -91,8 +141,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-console.log(displayNames);
-
+zooAnimals.forEach(item => console.log(displayNames))
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
