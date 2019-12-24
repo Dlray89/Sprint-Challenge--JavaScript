@@ -94,7 +94,7 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 graduates.forEach(function(graduates){
-  console.log(graduates.university)
+
 });
 const sortedSchools = graduates.sort((a, b) => (a.university > b.university ? 1: -1));
 console.log(sortedSchools)
@@ -105,10 +105,16 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+graduates.forEach(function(graduates){
+  console.log(`${graduates.first_name}, ${graduates.email}`);
+})
+
+
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
+const unisWithUni = []
+
+
 console.log(unisWithUni);
 
 
@@ -136,6 +142,7 @@ const displayNames = [];
 zooAnimals.forEach(function(zooAnimals){
 console.log(zooAnimals.animal_name, zooAnimals.scientific_name);
 })
+
 /* Request 2: .map()
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 */
@@ -152,15 +159,14 @@ const lowPopulationAnimals = [];
 const lowerpop = zooAnimals.filter(zooAnimals => zooAnimals.population <= 5)
 console.log(lowerpop);
 
+
 /* Request 4: .reduce() 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 */
 const populationTotal = 0;
-const totalPop = zooAnimals.reduce((total, populationgit) => total + population)
-console.log(totalPop);
 
-
-
+const lowPopAnimals = zooAnimals.reduce((sum, zooAnimals) => sum + zooAnimals.population, 0);
+console.log(lowPopAnimals);
 
 /*
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
