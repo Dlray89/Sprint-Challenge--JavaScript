@@ -8,14 +8,10 @@
 */
 
 function consume(a,b,cb){
-  return a + b;
+ return cb(a,b)
 }
 
-function cb(a ,b) {
-  return cb(a,b)
-  
-}
-console.log(consume)
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -25,14 +21,14 @@ console.log(consume)
 function add(num1, num2){
   return num1 + num2;
 }
-console.log(add(8,3));
+
 
 function multiply(num1, num2) {
   return num1 * num2 
 }
 
-function greeting(a,b,cb) {
-  return 'Hello,'+ firstName + " " + lastName +
+function greeting(firstName, lastName) {
+  return 'Hello,' + " " + firstName + " " + lastName + " " +
 'nice to meet you!'}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -46,6 +42,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
+
 //function that are nested can use the location of a variable when you declared it. Nest functon also
 // have the ability to access and declared variable out the outer scope.
 
